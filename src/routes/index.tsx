@@ -86,10 +86,14 @@ const whyChoose = [
 ];
 
 const testimonials = [
-  { name: "Priya S.", text: "After months of back pain, the neurotherapy sessions gave me real relief without any medication. Highly recommend.", rating: 5 },
-  { name: "Rakesh M.", text: "Migraines used to disrupt my work. The personalized plan here changed my routine completely.", rating: 5 },
-  { name: "Anita R.", text: "Warm, professional and genuinely caring. My knee pain has improved noticeably.", rating: 5 },
-  { name: "Sandeep K.", text: "Felt heard and well-guided from day one. The drug-free approach really works.", rating: 5 },
+  { name: "Priya S.", location: "Banashankari", text: "After months of back pain, the neurotherapy sessions gave me real relief without any medication. Highly recommend.", rating: 5 },
+  { name: "Rakesh M.", location: "Jayanagar", text: "Migraines used to disrupt my work. The personalized plan here changed my routine completely.", rating: 5 },
+  { name: "Anita R.", location: "Basavanagudi", text: "Warm, professional and genuinely caring. My knee pain has improved noticeably.", rating: 5 },
+  { name: "Sandeep K.", location: "JP Nagar", text: "Felt heard and well-guided from day one. The drug-free approach really works.", rating: 5 },
+  { name: "Lakshmi N.", location: "Bengaluru", text: "I was sceptical at first, but the results spoke for themselves. Better sleep and less stress in just a few sessions.", rating: 5 },
+  { name: "Manoj T.", location: "Koramangala", text: "Finally found a clinic that listens. My frozen shoulder feels much better and I can move freely again.", rating: 5 },
+  { name: "Divya P.", location: "Hanumanthanagar", text: "The doctor explained everything clearly. I appreciate the natural, holistic way of healing.", rating: 5 },
+  { name: "Arun B.", location: "Uttarahalli", text: "Great experience. Friendly staff, calm clinic, and most importantly, my sciatica pain is under control.", rating: 5 },
 ];
 
 const faqs = [
