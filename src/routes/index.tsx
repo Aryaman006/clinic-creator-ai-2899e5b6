@@ -8,12 +8,6 @@ import {
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
 } from "lucide-react";
-import heroImg from "@/assets/indian-neurotherapy-hero.jpg.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
-import therapyConsultationImg from "@/assets/indian-neurotherapy-consultation.jpg.asset.json";
-import therapyRoomImg from "@/assets/indian-neurotherapy-room.jpg.asset.json";
-import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
-import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { Input } from "@/components/ui/input";
@@ -35,7 +29,6 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: "/" },
-      { rel: "preload", as: "image", href: heroImg.url, fetchpriority: "high" },
     ],
     scripts: [{
       type: "application/ld+json",
@@ -149,16 +142,9 @@ function Index() {
 function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2.5">
-      <div className="rounded-xl border border-border bg-background p-1 shadow-soft">
-        <img
-          src={logoAsset.url}
-          alt="Neurotherapy Dr. Mahindra logo"
-          className="h-9 w-auto object-contain"
-          width="44"
-          height="44"
-          decoding="async"
-        />
-      </div>
+      <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-primary to-healing text-primary-foreground shadow-soft">
+        <Leaf className="h-5 w-5" />
+      </span>
       <span className="flex flex-col leading-tight">
         <span className="font-display text-base font-semibold tracking-tight">Dr. Mahindra</span>
         <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Neurotherapy</span>
@@ -254,30 +240,6 @@ function Hero() {
             ))}
           </dl>
         </div>
-        <div className="relative mx-auto mt-14 max-w-5xl">
-          <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
-            <img
-              src={heroImg.url}
-              alt="Indian doctor explaining neurotherapy nervous-system care to patients in Bengaluru"
-              width={1536}
-              height={768}
-              fetchPriority="high"
-              decoding="async"
-              className="aspect-[2/1] w-full object-cover"
-            />
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-background/90 p-4 backdrop-blur sm:left-auto sm:right-6 sm:max-w-xs">
-              <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-healing/15 text-healing"><ShieldCheck className="h-5 w-5" /></div>
-                <div className="min-w-0">
-                  <p className="truncate text-sm font-semibold">Safe, non-invasive therapy</p>
-                  <p className="truncate text-xs text-muted-foreground">Personalized plans • No medication</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-full bg-primary/15 blur-2xl lg:block" />
-          <div className="absolute -bottom-8 -right-8 hidden h-32 w-32 rounded-full bg-healing/20 blur-3xl lg:block" />
-        </div>
       </div>
     </section>
   );
@@ -361,45 +323,8 @@ function Services() {
     <section id="services" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.6fr] lg:items-center">
-          <div className="grid gap-4">
-            <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
-              <img
-                src={therapyConsultationImg.url}
-                alt="Indian neurotherapy doctor explaining spine and nerve chart to a patient in Bengaluru"
-                width={1344}
-                height={1008}
-                loading="lazy"
-                decoding="async"
-                className="aspect-video w-full object-cover sm:aspect-[4/3]"
-              />
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
-                <img
-                  src={therapyRoomImg.url}
-                  alt="Neurotherapy treatment room at the Indian clinic in Bengaluru"
-                  width={1344}
-                  height={1008}
-                  loading="lazy"
-                  decoding="async"
-                  className="aspect-video w-full object-cover sm:aspect-[4/3]"
-                />
-              </div>
-              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
-                <img
-                  src={therapyStillLifeImg.url}
-                  alt="Neurotherapy pressure point diagram"
-                  width={1344}
-                  height={1008}
-                  loading="lazy"
-                  decoding="async"
-                  className="aspect-video w-full object-cover sm:aspect-[4/3]"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-14">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map(({ icon: Icon, title, desc }) => (
               <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
@@ -424,8 +349,8 @@ function WhyChoose() {
     <section id="why" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Why Choose Us" title="Care you can trust" />
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-          <div className="order-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-2 lg:order-1">
+        <div className="mt-14">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {whyChoose.map(({ icon: Icon, title, desc }) => (
               <div key={title} className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6">
                 <div className="grid h-11 w-11 place-items-center rounded-xl bg-healing/15 text-healing"><Icon className="h-5 w-5" /></div>
@@ -433,20 +358,6 @@ function WhyChoose() {
                 <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
               </div>
             ))}
-          </div>
-          <div className="order-1 relative lg:order-2">
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft">
-              <img
-                src={spineDiagramImg.url}
-                alt="Nervous system and spine diagram used in neurotherapy"
-                width={1344}
-                height={1008}
-                loading="lazy"
-                decoding="async"
-                className="aspect-video w-full rounded-2xl object-cover sm:aspect-[4/3]"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-full bg-primary/15 blur-3xl lg:block" />
           </div>
         </div>
       </div>
