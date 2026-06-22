@@ -8,7 +8,7 @@ import {
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
-import heroImg from "@/assets/hero-healing.jpg";
+import heroImg from "@/assets/neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset.json";
 import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
@@ -241,9 +241,9 @@ function Hero() {
             ))}
           </dl>
         </div>
-        <div className="relative">
-          <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
-            <img src={heroImg} alt="Calm wellness clinic interior in Bengaluru" width={1536} height={1280} className="aspect-[5/6] w-full object-cover" />
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
+              <img src={heroImg.url} alt="Neurotherapy consultation and spine care at the clinic" width={1536} height={1024} className="aspect-[3/2] w-full object-cover" />
             <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-background/90 p-4 backdrop-blur">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-healing/15 text-healing"><ShieldCheck className="h-5 w-5" /></div>
