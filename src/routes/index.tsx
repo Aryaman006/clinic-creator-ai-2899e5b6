@@ -10,10 +10,10 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-healing.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
-import therapyConsultationImg from "@/assets/therapy-consultation.jpg.asset.json";
-import therapyRoomImg from "@/assets/therapy-room.jpg.asset.json";
-import therapyStillLifeImg from "@/assets/therapy-still-life.jpg.asset.json";
-import spineDiagramImg from "@/assets/spine-diagram.jpg.asset.json";
+import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset.json";
+import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
+import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
+import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import doctorPortraitImg from "@/assets/doctor-portrait.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -363,7 +363,7 @@ function Services() {
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
               <img
                 src={therapyConsultationImg.url}
-                alt="Neurotherapy consultation at the clinic"
+                alt="Neurotherapy consultation with spine and nerve chart at the clinic"
                 width={1344}
                 height={1008}
                 loading="lazy"
@@ -374,7 +374,7 @@ function Services() {
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                 <img
                   src={therapyRoomImg.url}
-                  alt="Calm therapy room at Neurotherapy Dr. Mahindra"
+                  alt="Neurotherapy treatment room at Neurotherapy Dr. Mahindra"
                   width={1344}
                   height={1008}
                   loading="lazy"
@@ -384,7 +384,7 @@ function Services() {
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                 <img
                   src={therapyStillLifeImg.url}
-                  alt="Natural healing therapy setup"
+                  alt="Neurotherapy pressure point diagram"
                   width={1344}
                   height={1008}
                   loading="lazy"
@@ -432,11 +432,11 @@ function WhyChoose() {
             <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft">
               <img
                 src={spineDiagramImg.url}
-                alt="Illustration of spine and nervous system care"
+                alt="Nervous system and spine diagram used in neurotherapy"
                 width={1344}
                 height={1008}
                 loading="lazy"
-                className="aspect-[4/3] w-full rounded-2xl object-cover"
+                className="aspect-video w-full rounded-2xl object-cover sm:aspect-[4/3]"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-full bg-primary/15 blur-3xl lg:block" />
