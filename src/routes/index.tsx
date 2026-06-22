@@ -143,13 +143,15 @@ function Index() {
 function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2.5">
-      <img
-        src={logoAsset.url}
-        alt="Neurotherapy Dr. Mahindra logo"
-        className="h-11 w-11 rounded-full object-cover shadow-soft"
-        width="44"
-        height="44"
-      />
+      <div className="rounded-xl border border-border bg-background p-1 shadow-soft">
+        <img
+          src={logoAsset.url}
+          alt="Neurotherapy Dr. Mahindra logo"
+          className="h-9 w-auto object-contain"
+          width="44"
+          height="44"
+        />
+      </div>
       <span className="flex flex-col leading-tight">
         <span className="font-display text-base font-semibold tracking-tight">Dr. Mahindra</span>
         <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Neurotherapy</span>
