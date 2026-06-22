@@ -9,6 +9,7 @@ import {
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
 import heroImg from "@/assets/hero-healing.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
