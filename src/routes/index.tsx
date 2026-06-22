@@ -607,8 +607,9 @@ function Footer() {
           <p className="mt-4 max-w-md text-sm text-background/70">Natural Healing • Better Health • Better Life. A trusted neurotherapy clinic in Banashankari, Bengaluru.</p>
           <div className="mt-5 flex gap-3">
             <a href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-whatsapp"><MessageCircle className="h-4 w-4" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Instagram className="h-4 w-4" /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Facebook className="h-4 w-4" /></a>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Instagram className="h-4 w-4" /></a>
+            <a href={FACEBOOK} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Facebook className="h-4 w-4" /></a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Linkedin className="h-4 w-4" /></a>
             <a href={MAPS_LINK} target="_blank" rel="noreferrer" aria-label="Google Maps" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><MapPin className="h-4 w-4" /></a>
           </div>
         </div>
