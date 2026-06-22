@@ -55,7 +55,8 @@ export const Route = createFileRoute("/")({
 
 const PHONE = "076193 35553";
 const PHONE_TEL = "+917619335553";
-const WHATSAPP = "https://wa.me/917619335553";
+const WHATSAPP = "https://wa.me/919035511488";
+const WHATSAPP_DISPLAY = "+91 90355 11488";
 const INSTAGRAM = "https://www.instagram.com/neurotherapy_dr.mahindra/";
 const FACEBOOK = "https://www.facebook.com/NeurotherapyDrMahindra";
 const LINKEDIN = "https://www.linkedin.com/in/neurotherapy-dr-mahindra";
@@ -439,7 +440,7 @@ function Contact() {
               <div className="mt-5 space-y-4 text-sm">
                 <div className="flex gap-3"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><p className="text-muted-foreground">{ADDRESS}</p></div>
                 <a href={`tel:${PHONE_TEL}`} className="flex gap-3 hover:text-primary"><Phone className="h-5 w-5 shrink-0 text-primary" /><span>{PHONE}</span></a>
-                <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex gap-3 hover:text-healing"><MessageCircle className="h-5 w-5 shrink-0 text-healing" /><span>WhatsApp us anytime</span></a>
+                <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex gap-3 hover:text-healing"><MessageCircle className="h-5 w-5 shrink-0 text-healing" /><span>{WHATSAPP_DISPLAY}</span></a>
                 <div className="flex gap-3"><Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><p className="text-muted-foreground">Mon – Sat • By Appointment</p></div>
               </div>
               <a href={MAPS_LINK} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary">Get directions <ChevronRight className="h-4 w-4" /></a>
