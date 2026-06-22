@@ -254,11 +254,31 @@ function Hero() {
 }
 
 function TrustStrip() {
-  const items = ["Banashankari, Bengaluru", "Drug-Free Therapy", "Personalized Plans", "10,000+ Patients", "4.9★ Rated"];
+  const items = [
+    "Banashankari, Bengaluru",
+    "Drug-Free Therapy",
+    "0 Side Effects",
+    "Personalized Plans",
+    "10,000+ Patients",
+    "4.9★ Rated",
+    "Natural Healing",
+    "Non-Invasive",
+  ];
+  const loop = [...items, ...items];
   return (
-    <div className="border-y border-border bg-surface">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-4 py-5 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground sm:px-6 lg:px-8">
-        {items.map((i) => <span key={i} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-healing" />{i}</span>)}
+    <div
+      className="group relative overflow-hidden border-y border-border bg-surface"
+      aria-label="Clinic highlights"
+    >
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-surface to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-surface to-transparent" />
+      <div className="flex w-max animate-marquee gap-x-10 py-5 pr-10 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground group-hover:[animation-play-state:paused]">
+        {loop.map((i, idx) => (
+          <span key={`${i}-${idx}`} className="flex shrink-0 items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-healing" />
+            {i}
+          </span>
+        ))}
       </div>
     </div>
   );
