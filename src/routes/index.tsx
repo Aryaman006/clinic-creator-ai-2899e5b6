@@ -358,19 +358,55 @@ function Services() {
     <section id="services" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
-            <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="h-6 w-6" />
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.6fr] lg:items-center">
+          <div className="grid gap-4">
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+              <img
+                src={therapyConsultationImg.url}
+                alt="Neurotherapy consultation at the clinic"
+                width={1344}
+                height={1008}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+                <img
+                  src={therapyRoomImg.url}
+                  alt="Calm therapy room at Neurotherapy Dr. Mahindra"
+                  width={1344}
+                  height={1008}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
-              <h3 className="mt-5 text-lg font-semibold">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-              <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
-                Learn More <ChevronRight className="h-4 w-4" />
-              </a>
-            </article>
-          ))}
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+                <img
+                  src={therapyStillLifeImg.url}
+                  alt="Natural healing therapy setup"
+                  width={1344}
+                  height={1008}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+            {services.map(({ icon: Icon, title, desc }) => (
+              <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
+                  Learn More <ChevronRight className="h-4 w-4" />
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
