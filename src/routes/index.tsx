@@ -10,6 +10,11 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-healing.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
+import therapyConsultationImg from "@/assets/therapy-consultation.jpg.asset.json";
+import therapyRoomImg from "@/assets/therapy-room.jpg.asset.json";
+import therapyStillLifeImg from "@/assets/therapy-still-life.jpg.asset.json";
+import spineDiagramImg from "@/assets/spine-diagram.jpg.asset.json";
+import doctorPortraitImg from "@/assets/doctor-portrait.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
