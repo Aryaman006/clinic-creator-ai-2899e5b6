@@ -14,7 +14,6 @@ import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset
 import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
 import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
 import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
-import doctorPortraitImg from "@/assets/doctor-portrait.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
