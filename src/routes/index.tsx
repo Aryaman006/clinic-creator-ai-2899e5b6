@@ -6,7 +6,7 @@ import {
   Phone, MessageCircle, MapPin, Mail, Calendar, Star, ShieldCheck,
   HeartPulse, Activity, Brain, Bone, Sparkles, Leaf, Stethoscope,
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
-  Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
+  Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
 } from "lucide-react";
 import heroImg from "@/assets/indian-neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
