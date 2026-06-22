@@ -10,6 +10,11 @@ import {
 } from "lucide-react";
 import heroImg from "@/assets/hero-healing.jpg";
 import logoAsset from "@/assets/logo.png.asset.json";
+import therapyConsultationImg from "@/assets/therapy-consultation.jpg.asset.json";
+import therapyRoomImg from "@/assets/therapy-room.jpg.asset.json";
+import therapyStillLifeImg from "@/assets/therapy-still-life.jpg.asset.json";
+import spineDiagramImg from "@/assets/spine-diagram.jpg.asset.json";
+import doctorPortraitImg from "@/assets/doctor-portrait.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -303,6 +308,20 @@ function About() {
     <section id="about" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl border border-border shadow-soft">
+              <img
+                src={doctorPortraitImg.url}
+                alt="Dr. Mahindra at the neurotherapy clinic"
+                width={1008}
+                height={1344}
+                loading="lazy"
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 rounded-full bg-healing/20 blur-3xl lg:block" />
+            <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-full bg-primary/15 blur-2xl lg:block" />
+          </div>
           <div>
             <SectionHead eyebrow="About the Clinic" title="A calm space for natural healing" />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -313,20 +332,20 @@ function About() {
                 <li key={p} className="flex items-start gap-3"><ChevronRight className="mt-1 h-4 w-4 shrink-0 text-healing" /><span>{p}</span></li>
               ))}
             </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: HeartPulse, k: "10k+", v: "Patients" },
-              { icon: Star, k: "4.9★", v: "Rating" },
-              { icon: Leaf, k: "100%", v: "Natural" },
-              { icon: ShieldCheck, k: "Safe", v: "Non-invasive" },
-            ].map(({ icon: Icon, k, v }) => (
-              <div key={k} className="rounded-2xl border border-border bg-card p-6 shadow-card">
-                <Icon className="h-6 w-6 text-primary" />
-                <p className="mt-4 font-display text-2xl font-semibold">{k}</p>
-                <p className="text-sm text-muted-foreground">{v}</p>
-              </div>
-            ))}
+            <div className="mt-10 grid grid-cols-2 gap-4">
+              {[
+                { icon: HeartPulse, k: "10k+", v: "Patients" },
+                { icon: Star, k: "4.9★", v: "Rating" },
+                { icon: Leaf, k: "100%", v: "Natural" },
+                { icon: ShieldCheck, k: "Safe", v: "Non-invasive" },
+              ].map(({ icon: Icon, k, v }) => (
+                <div key={k} className="rounded-2xl border border-border bg-card p-5 shadow-card">
+                  <Icon className="h-5 w-5 text-primary" />
+                  <p className="mt-3 font-display text-xl font-semibold">{k}</p>
+                  <p className="text-xs text-muted-foreground">{v}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -339,19 +358,55 @@ function Services() {
     <section id="services" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map(({ icon: Icon, title, desc }) => (
-            <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="h-6 w-6" />
+        <div className="mt-14 grid gap-6 lg:grid-cols-[1fr_1.6fr] lg:items-center">
+          <div className="grid gap-4">
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+              <img
+                src={therapyConsultationImg.url}
+                alt="Neurotherapy consultation at the clinic"
+                width={1344}
+                height={1008}
+                loading="lazy"
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+                <img
+                  src={therapyRoomImg.url}
+                  alt="Calm therapy room at Neurotherapy Dr. Mahindra"
+                  width={1344}
+                  height={1008}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
               </div>
-              <h3 className="mt-5 text-lg font-semibold">{title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-              <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
-                Learn More <ChevronRight className="h-4 w-4" />
-              </a>
-            </article>
-          ))}
+              <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
+                <img
+                  src={therapyStillLifeImg.url}
+                  alt="Natural healing therapy setup"
+                  width={1344}
+                  height={1008}
+                  loading="lazy"
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+            {services.map(({ icon: Icon, title, desc }) => (
+              <article key={title} className="group rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
+                  Learn More <ChevronRight className="h-4 w-4" />
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -363,14 +418,29 @@ function WhyChoose() {
     <section id="why" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Why Choose Us" title="Care you can trust" />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {whyChoose.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6">
-              <div className="grid h-11 w-11 place-items-center rounded-xl bg-healing/15 text-healing"><Icon className="h-5 w-5" /></div>
-              <p className="mt-4 font-semibold">{title}</p>
-              <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="order-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-2 lg:order-1">
+            {whyChoose.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6">
+                <div className="grid h-11 w-11 place-items-center rounded-xl bg-healing/15 text-healing"><Icon className="h-5 w-5" /></div>
+                <p className="mt-4 font-semibold">{title}</p>
+                <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="order-1 relative lg:order-2">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft">
+              <img
+                src={spineDiagramImg.url}
+                alt="Illustration of spine and nervous system care"
+                width={1344}
+                height={1008}
+                loading="lazy"
+                className="aspect-[4/3] w-full rounded-2xl object-cover"
+              />
             </div>
-          ))}
+            <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-full bg-primary/15 blur-3xl lg:block" />
+          </div>
         </div>
       </div>
     </section>
