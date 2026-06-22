@@ -418,14 +418,29 @@ function WhyChoose() {
     <section id="why" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Why Choose Us" title="Care you can trust" />
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {whyChoose.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6">
-              <div className="grid h-11 w-11 place-items-center rounded-xl bg-healing/15 text-healing"><Icon className="h-5 w-5" /></div>
-              <p className="mt-4 font-semibold">{title}</p>
-              <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+        <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+          <div className="order-2 grid gap-5 sm:grid-cols-2 lg:grid-cols-2 lg:order-1">
+            {whyChoose.map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6">
+                <div className="grid h-11 w-11 place-items-center rounded-xl bg-healing/15 text-healing"><Icon className="h-5 w-5" /></div>
+                <p className="mt-4 font-semibold">{title}</p>
+                <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="order-1 relative lg:order-2">
+            <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft">
+              <img
+                src={spineDiagramImg.url}
+                alt="Illustration of spine and nervous system care"
+                width={1344}
+                height={1008}
+                loading="lazy"
+                className="aspect-[4/3] w-full rounded-2xl object-cover"
+              />
             </div>
-          ))}
+            <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-full bg-primary/15 blur-3xl lg:block" />
+          </div>
         </div>
       </div>
     </section>
