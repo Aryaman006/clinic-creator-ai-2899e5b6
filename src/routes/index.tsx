@@ -6,7 +6,7 @@ import {
   Phone, MessageCircle, MapPin, Mail, Calendar, Star, ShieldCheck,
   HeartPulse, Activity, Brain, Bone, Sparkles, Leaf, Stethoscope,
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
-  Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
+  Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
 } from "lucide-react";
 import heroImg from "@/assets/indian-neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
@@ -31,9 +31,12 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Trusted Neurotherapy and Natural Healing Clinic in Banashankari, Bengaluru. Supporting wellness through Neurotherapy, Acupressure, and holistic care. Call +91 76193 35553." },
       { property: "og:title", content: "Neurotherapy Dr. Mahindra | Natural Healing Clinic in Bengaluru" },
       { property: "og:description", content: "Drug-free wellness through Neurotherapy & Acupressure. 10,000+ patients served." },
-      { property: "og:url", content: "/" },
+    { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "preload", as: "image", href: heroImg.url, fetchpriority: "high" },
+    ],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
@@ -60,6 +63,9 @@ export const Route = createFileRoute("/")({
 const PHONE = "076193 35553";
 const PHONE_TEL = "+917619335553";
 const WHATSAPP = "https://wa.me/917619335553";
+const INSTAGRAM = "https://www.instagram.com/neurotherapy_dr.mahindra/";
+const FACEBOOK = "https://www.facebook.com/NeurotherapyDrMahindra";
+const LINKEDIN = "https://www.linkedin.com/in/neurotherapy-dr-mahindra";
 const ADDRESS = "2nd Block, Phase 1, Sourabha Complex, 5th Cross Road, Banashankari 1st Stage, Bengaluru, Karnataka 560050";
 const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengaluru&output=embed";
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
@@ -150,6 +156,7 @@ function Logo() {
           className="h-9 w-auto object-contain"
           width="44"
           height="44"
+          decoding="async"
         />
       </div>
       <span className="flex flex-col leading-tight">
@@ -254,6 +261,8 @@ function Hero() {
               alt="Indian doctor explaining neurotherapy nervous-system care to patients in Bengaluru"
               width={1536}
               height={768}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[2/1] w-full object-cover"
             />
             <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-background/90 p-4 backdrop-blur sm:left-auto sm:right-6 sm:max-w-xs">
@@ -361,6 +370,7 @@ function Services() {
                 width={1344}
                 height={1008}
                 loading="lazy"
+                decoding="async"
                 className="aspect-video w-full object-cover sm:aspect-[4/3]"
               />
             </div>
@@ -372,6 +382,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
@@ -382,6 +393,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
@@ -430,6 +442,7 @@ function WhyChoose() {
                 width={1344}
                 height={1008}
                 loading="lazy"
+                decoding="async"
                 className="aspect-video w-full rounded-2xl object-cover sm:aspect-[4/3]"
               />
             </div>
@@ -594,8 +607,9 @@ function Footer() {
           <p className="mt-4 max-w-md text-sm text-background/70">Natural Healing • Better Health • Better Life. A trusted neurotherapy clinic in Banashankari, Bengaluru.</p>
           <div className="mt-5 flex gap-3">
             <a href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-whatsapp"><MessageCircle className="h-4 w-4" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Instagram className="h-4 w-4" /></a>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Facebook className="h-4 w-4" /></a>
+            <a href={INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Instagram className="h-4 w-4" /></a>
+            <a href={FACEBOOK} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Facebook className="h-4 w-4" /></a>
+            <a href={LINKEDIN} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><Linkedin className="h-4 w-4" /></a>
             <a href={MAPS_LINK} target="_blank" rel="noreferrer" aria-label="Google Maps" className="grid h-10 w-10 place-items-center rounded-full bg-background/10 hover:bg-background/20"><MapPin className="h-4 w-4" /></a>
           </div>
         </div>
