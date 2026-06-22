@@ -244,7 +244,7 @@ function Hero() {
           <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
             <img
               src={heroImg.url}
-              alt="Neurotherapy consultation and spine care at the clinic"
+              alt="Indian doctor explaining neurotherapy nervous-system care to patients in Bengaluru"
               width={1536}
               height={768}
               className="aspect-[2/1] w-full object-cover"
