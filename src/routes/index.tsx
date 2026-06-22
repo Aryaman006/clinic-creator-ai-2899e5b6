@@ -350,7 +350,7 @@ function Services() {
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
               <img
                 src={therapyConsultationImg.url}
-                alt="Neurotherapy consultation with spine and nerve chart at the clinic"
+                alt="Indian neurotherapy doctor explaining spine and nerve chart to a patient in Bengaluru"
                 width={1344}
                 height={1008}
                 loading="lazy"
@@ -361,7 +361,7 @@ function Services() {
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                 <img
                   src={therapyRoomImg.url}
-                  alt="Neurotherapy treatment room at Neurotherapy Dr. Mahindra"
+                  alt="Neurotherapy treatment room at the Indian clinic in Bengaluru"
                   width={1344}
                   height={1008}
                   loading="lazy"
