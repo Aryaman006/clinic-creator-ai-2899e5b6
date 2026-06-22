@@ -86,10 +86,14 @@ const whyChoose = [
 ];
 
 const testimonials = [
-  { name: "Priya S.", text: "After months of back pain, the neurotherapy sessions gave me real relief without any medication. Highly recommend.", rating: 5 },
-  { name: "Rakesh M.", text: "Migraines used to disrupt my work. The personalized plan here changed my routine completely.", rating: 5 },
-  { name: "Anita R.", text: "Warm, professional and genuinely caring. My knee pain has improved noticeably.", rating: 5 },
-  { name: "Sandeep K.", text: "Felt heard and well-guided from day one. The drug-free approach really works.", rating: 5 },
+  { name: "Priya S.", location: "Banashankari", text: "After months of back pain, the neurotherapy sessions gave me real relief without any medication. Highly recommend.", rating: 5 },
+  { name: "Rakesh M.", location: "Jayanagar", text: "Migraines used to disrupt my work. The personalized plan here changed my routine completely.", rating: 5 },
+  { name: "Anita R.", location: "Basavanagudi", text: "Warm, professional and genuinely caring. My knee pain has improved noticeably.", rating: 5 },
+  { name: "Sandeep K.", location: "JP Nagar", text: "Felt heard and well-guided from day one. The drug-free approach really works.", rating: 5 },
+  { name: "Lakshmi N.", location: "Bengaluru", text: "I was sceptical at first, but the results spoke for themselves. Better sleep and less stress in just a few sessions.", rating: 5 },
+  { name: "Manoj T.", location: "Koramangala", text: "Finally found a clinic that listens. My frozen shoulder feels much better and I can move freely again.", rating: 5 },
+  { name: "Divya P.", location: "Hanumanthanagar", text: "The doctor explained everything clearly. I appreciate the natural, holistic way of healing.", rating: 5 },
+  { name: "Arun B.", location: "Uttarahalli", text: "Great experience. Friendly staff, calm clinic, and most importantly, my sciatica pain is under control.", rating: 5 },
 ];
 
 const faqs = [
@@ -377,18 +381,37 @@ function Testimonials() {
   return (
     <section id="reviews" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHead eyebrow="Patient Stories" title="What our patients say" />
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patient Stories</span>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">What our patients say</h2>
+          <p className="mt-4 text-muted-foreground">Real experiences from people who found relief through natural healing.</p>
+          <a
+            href={MAPS_LINK}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium shadow-card transition-colors hover:border-primary/30"
+          >
+            <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/10 text-primary">
+              <Star className="h-3 w-3 fill-current" />
+            </span>
+            4.9★ rating across 500+ Google Reviews
+            <ChevronRight className="h-4 w-4" />
+          </a>
+        </div>
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {testimonials.map((t) => (
-            <figure key={t.name} className="relative rounded-2xl border border-border bg-card p-7 shadow-card">
-              <Quote className="absolute right-6 top-6 h-8 w-8 text-primary/15" />
-              <div className="flex gap-1 text-healing">
-                {Array.from({ length: t.rating }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
+            <figure key={t.name} className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-card transition-transform hover:-translate-y-1 hover:shadow-soft">
+              <Quote className="absolute right-5 top-5 h-6 w-6 text-primary/15" />
+              <div className="flex gap-0.5 text-healing">
+                {Array.from({ length: t.rating }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-current" />)}
               </div>
-              <blockquote className="mt-4 text-base leading-relaxed">"{t.text}"</blockquote>
-              <figcaption className="mt-5 flex items-center gap-3 border-t border-border pt-4">
-                <span className="grid h-10 w-10 place-items-center rounded-full bg-primary/10 font-semibold text-primary">{t.name[0]}</span>
-                <span className="text-sm font-medium">{t.name}</span>
+              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">"{t.text}"</blockquote>
+              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-xs font-semibold text-primary">{t.name[0]}</span>
+                <div className="min-w-0">
+                  <span className="block truncate text-sm font-medium">{t.name}</span>
+                  <span className="block truncate text-xs text-muted-foreground">{t.location}</span>
+                </div>
               </figcaption>
             </figure>
           ))}
