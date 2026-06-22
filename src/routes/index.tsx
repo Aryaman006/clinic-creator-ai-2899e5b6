@@ -432,11 +432,11 @@ function WhyChoose() {
             <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-4 shadow-soft">
               <img
                 src={spineDiagramImg.url}
-                alt="Illustration of spine and nervous system care"
+                alt="Nervous system and spine diagram used in neurotherapy"
                 width={1344}
                 height={1008}
                 loading="lazy"
-                className="aspect-[4/3] w-full rounded-2xl object-cover"
+                className="aspect-video w-full rounded-2xl object-cover sm:aspect-[4/3]"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden h-28 w-28 rounded-full bg-primary/15 blur-3xl lg:block" />
