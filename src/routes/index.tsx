@@ -222,8 +222,8 @@ function Hero() {
             {[
               ["10,000+", "Patients Served"],
               ["4.9★", "Google Rating"],
+              ["0", "Side Effects"],
               ["Drug-Free", "Wellness Approach"],
-              ["Personal", "Care for Every Patient"],
             ].map(([k, v]) => (
               <div key={k}>
                 <dt className="font-display text-2xl font-semibold text-foreground">{k}</dt>
