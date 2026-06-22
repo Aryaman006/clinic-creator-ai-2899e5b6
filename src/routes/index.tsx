@@ -359,7 +359,7 @@ function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.6fr] lg:items-center">
-          <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:gap-4 lg:flex lg:flex-col">
+          <div className="grid gap-4">
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
               <img
                 src={therapyConsultationImg.url}
@@ -367,10 +367,10 @@ function Services() {
                 width={1344}
                 height={1008}
                 loading="lazy"
-                className="aspect-video w-full object-cover sm:aspect-[4/3] lg:aspect-[4/3]"
+                className="aspect-video w-full object-cover sm:aspect-[4/3]"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:col-span-1 sm:flex sm:flex-col sm:gap-4 lg:grid lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                 <img
                   src={therapyRoomImg.url}
@@ -378,7 +378,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
-                  className="aspect-video w-full object-cover sm:aspect-[4/3] lg:aspect-[4/3]"
+                  className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
@@ -388,7 +388,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
-                  className="aspect-video w-full object-cover sm:aspect-[4/3] lg:aspect-[4/3]"
+                  className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
             </div>
