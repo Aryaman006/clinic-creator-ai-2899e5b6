@@ -156,6 +156,7 @@ function Logo() {
           className="h-9 w-auto object-contain"
           width="44"
           height="44"
+          decoding="async"
         />
       </div>
       <span className="flex flex-col leading-tight">
