@@ -8,10 +8,10 @@ import {
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
-import heroImg from "@/assets/neurotherapy-hero.png.asset.json";
+import heroImg from "@/assets/indian-neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
-import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset.json";
-import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
+import therapyConsultationImg from "@/assets/indian-neurotherapy-consultation.jpg.asset.json";
+import therapyRoomImg from "@/assets/indian-neurotherapy-room.jpg.asset.json";
 import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
 import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import { Button } from "@/components/ui/button";
@@ -244,7 +244,7 @@ function Hero() {
           <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
             <img
               src={heroImg.url}
-              alt="Neurotherapy consultation and spine care at the clinic"
+              alt="Indian doctor explaining neurotherapy nervous-system care to patients in Bengaluru"
               width={1536}
               height={768}
               className="aspect-[2/1] w-full object-cover"
@@ -350,7 +350,7 @@ function Services() {
             <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
               <img
                 src={therapyConsultationImg.url}
-                alt="Neurotherapy consultation with spine and nerve chart at the clinic"
+                alt="Indian neurotherapy doctor explaining spine and nerve chart to a patient in Bengaluru"
                 width={1344}
                 height={1008}
                 loading="lazy"
@@ -361,7 +361,7 @@ function Services() {
               <div className="relative overflow-hidden rounded-2xl border border-border shadow-card">
                 <img
                   src={therapyRoomImg.url}
-                  alt="Neurotherapy treatment room at Neurotherapy Dr. Mahindra"
+                  alt="Neurotherapy treatment room at the Indian clinic in Bengaluru"
                   width={1344}
                   height={1008}
                   loading="lazy"
