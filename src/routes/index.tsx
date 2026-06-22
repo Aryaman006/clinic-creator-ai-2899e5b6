@@ -15,6 +15,7 @@ import therapyRoomImg from "@/assets/indian-neurotherapy-room.jpg.asset.json";
 import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
 import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -142,13 +143,15 @@ function Index() {
 function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2.5">
-      <img
-        src={logoAsset.url}
-        alt="Neurotherapy Dr. Mahindra logo"
-        className="h-11 w-11 rounded-full object-cover shadow-soft"
-        width="44"
-        height="44"
-      />
+      <div className="rounded-xl border border-border bg-background p-1 shadow-soft">
+        <img
+          src={logoAsset.url}
+          alt="Neurotherapy Dr. Mahindra logo"
+          className="h-9 w-auto object-contain"
+          width="44"
+          height="44"
+        />
+      </div>
       <span className="flex flex-col leading-tight">
         <span className="font-display text-base font-semibold tracking-tight">Dr. Mahindra</span>
         <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Neurotherapy</span>
@@ -173,6 +176,7 @@ function Nav() {
           ))}
         </nav>
         <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
           <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-2 rounded-full border border-border px-3.5 py-2 text-sm font-medium hover:bg-secondary">
             <Phone className="h-4 w-4 text-primary" /> {PHONE}
           </a>
@@ -180,9 +184,12 @@ function Nav() {
             <a href="#contact"><Calendar className="mr-1.5 h-4 w-4" />Book Appointment</a>
           </Button>
         </div>
-        <button onClick={() => setOpen(!open)} className="lg:hidden" aria-label="Menu">
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
+          <button onClick={() => setOpen(!open)} className="grid h-10 w-10 place-items-center" aria-label="Menu">
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
