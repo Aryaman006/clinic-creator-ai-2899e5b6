@@ -60,6 +60,9 @@ export const Route = createFileRoute("/")({
 const PHONE = "076193 35553";
 const PHONE_TEL = "+917619335553";
 const WHATSAPP = "https://wa.me/917619335553";
+const INSTAGRAM = "https://www.instagram.com/neurotherapy_dr.mahindra/";
+const FACEBOOK = "https://www.facebook.com/NeurotherapyDrMahindra";
+const LINKEDIN = "https://www.linkedin.com/in/neurotherapy-dr-mahindra";
 const ADDRESS = "2nd Block, Phase 1, Sourabha Complex, 5th Cross Road, Banashankari 1st Stage, Bengaluru, Karnataka 560050";
 const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengaluru&output=embed";
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
