@@ -391,7 +391,9 @@ function Testimonials() {
             rel="noreferrer"
             className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium shadow-card transition-colors hover:border-primary/30"
           >
-            <img src="https://www.google.com/favicon.ico" alt="Google" className="h-4 w-4 rounded-full" />
+            <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/10 text-primary">
+              <Star className="h-3 w-3 fill-current" />
+            </span>
             4.9★ rating across 500+ Google Reviews
             <ChevronRight className="h-4 w-4" />
           </a>
