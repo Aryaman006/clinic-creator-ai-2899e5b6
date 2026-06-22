@@ -8,10 +8,10 @@ import {
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
-import heroImg from "@/assets/neurotherapy-hero.png.asset.json";
+import heroImg from "@/assets/indian-neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
-import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset.json";
-import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
+import therapyConsultationImg from "@/assets/indian-neurotherapy-consultation.jpg.asset.json";
+import therapyRoomImg from "@/assets/indian-neurotherapy-room.jpg.asset.json";
 import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
 import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import { Button } from "@/components/ui/button";
