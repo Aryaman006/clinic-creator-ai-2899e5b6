@@ -308,6 +308,20 @@ function About() {
     <section id="about" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-3xl border border-border shadow-soft">
+              <img
+                src={doctorPortraitImg.url}
+                alt="Dr. Mahindra at the neurotherapy clinic"
+                width={1008}
+                height={1344}
+                loading="lazy"
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 hidden h-32 w-32 rounded-full bg-healing/20 blur-3xl lg:block" />
+            <div className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-full bg-primary/15 blur-2xl lg:block" />
+          </div>
           <div>
             <SectionHead eyebrow="About the Clinic" title="A calm space for natural healing" />
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -318,20 +332,20 @@ function About() {
                 <li key={p} className="flex items-start gap-3"><ChevronRight className="mt-1 h-4 w-4 shrink-0 text-healing" /><span>{p}</span></li>
               ))}
             </ul>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: HeartPulse, k: "10k+", v: "Patients" },
-              { icon: Star, k: "4.9★", v: "Rating" },
-              { icon: Leaf, k: "100%", v: "Natural" },
-              { icon: ShieldCheck, k: "Safe", v: "Non-invasive" },
-            ].map(({ icon: Icon, k, v }) => (
-              <div key={k} className="rounded-2xl border border-border bg-card p-6 shadow-card">
-                <Icon className="h-6 w-6 text-primary" />
-                <p className="mt-4 font-display text-2xl font-semibold">{k}</p>
-                <p className="text-sm text-muted-foreground">{v}</p>
-              </div>
-            ))}
+            <div className="mt-10 grid grid-cols-2 gap-4">
+              {[
+                { icon: HeartPulse, k: "10k+", v: "Patients" },
+                { icon: Star, k: "4.9★", v: "Rating" },
+                { icon: Leaf, k: "100%", v: "Natural" },
+                { icon: ShieldCheck, k: "Safe", v: "Non-invasive" },
+              ].map(({ icon: Icon, k, v }) => (
+                <div key={k} className="rounded-2xl border border-border bg-card p-5 shadow-card">
+                  <Icon className="h-5 w-5 text-primary" />
+                  <p className="mt-3 font-display text-xl font-semibold">{k}</p>
+                  <p className="text-xs text-muted-foreground">{v}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
