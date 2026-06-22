@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const PHONE = "+91 76193 35553";
+const PHONE = "076193 35553";
 const PHONE_TEL = "+917619335553";
 const WHATSAPP = "https://wa.me/917619335553";
 const ADDRESS = "2nd Block, Phase 1, Sourabha Complex, 5th Cross Road, Banashankari 1st Stage, Bengaluru, Karnataka 560050";
