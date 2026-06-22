@@ -8,7 +8,7 @@ import {
   Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
-import heroImg from "@/assets/hero-healing.jpg";
+import heroImg from "@/assets/neurotherapy-hero.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import therapyConsultationImg from "@/assets/neurotherapy-consultation.jpg.asset.json";
 import therapyRoomImg from "@/assets/neurotherapy-room.jpg.asset.json";
