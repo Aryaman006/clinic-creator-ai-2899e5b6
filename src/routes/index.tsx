@@ -260,7 +260,7 @@ function Hero() {
               alt="Indian doctor explaining neurotherapy nervous-system care to patients in Bengaluru"
               width={1536}
               height={768}
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
               className="aspect-[2/1] w-full object-cover"
             />
