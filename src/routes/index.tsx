@@ -9,6 +9,7 @@ import {
   Menu, X, ChevronDown, Instagram, Facebook, MapPinned, Clock,
 } from "lucide-react";
 import heroImg from "@/assets/hero-healing.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -133,9 +134,13 @@ function Index() {
 function Logo() {
   return (
     <a href="#top" className="flex items-center gap-2.5">
-      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-healing text-primary-foreground shadow-soft">
-        <Leaf className="h-5 w-5" />
-      </span>
+      <img
+        src={logoAsset.url}
+        alt="Neurotherapy Dr. Mahindra logo"
+        className="h-11 w-11 rounded-full object-cover shadow-soft"
+        width="44"
+        height="44"
+      />
       <span className="flex flex-col leading-tight">
         <span className="font-display text-base font-semibold tracking-tight">Dr. Mahindra</span>
         <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Neurotherapy</span>
