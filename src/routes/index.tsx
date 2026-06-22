@@ -370,6 +370,7 @@ function Services() {
                 width={1344}
                 height={1008}
                 loading="lazy"
+                decoding="async"
                 className="aspect-video w-full object-cover sm:aspect-[4/3]"
               />
             </div>
@@ -381,6 +382,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
@@ -391,6 +393,7 @@ function Services() {
                   width={1344}
                   height={1008}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-video w-full object-cover sm:aspect-[4/3]"
                 />
               </div>
@@ -439,6 +442,7 @@ function WhyChoose() {
                 width={1344}
                 height={1008}
                 loading="lazy"
+                decoding="async"
                 className="aspect-video w-full rounded-2xl object-cover sm:aspect-[4/3]"
               />
             </div>
