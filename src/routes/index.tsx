@@ -15,6 +15,7 @@ import therapyRoomImg from "@/assets/indian-neurotherapy-room.jpg.asset.json";
 import therapyStillLifeImg from "@/assets/neurotherapy-pressure-points.jpg.asset.json";
 import spineDiagramImg from "@/assets/neurotherapy-nerves.jpg.asset.json";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
