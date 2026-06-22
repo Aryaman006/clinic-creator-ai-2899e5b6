@@ -204,18 +204,18 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-16 lg:px-8 lg:py-24">
-        <div className="flex flex-col justify-center">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-healing/30 bg-healing/10 px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-healing">
             <Leaf className="h-3.5 w-3.5" /> Natural Healing • Better Health • Better Life
           </span>
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
             Trusted <span className="text-gradient-brand">Neurotherapy</span> & Natural Healing Clinic in Bengaluru
           </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Helping people improve their health naturally through Neurotherapy, Acupressure, and holistic wellness approaches.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary/90">
               <a href="#contact"><Calendar className="mr-2 h-4 w-4" />Book Appointment</a>
             </Button>
@@ -226,7 +226,7 @@ function Hero() {
               <a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle className="mr-2 h-4 w-4" />WhatsApp Us</a>
             </Button>
           </div>
-          <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
+          <dl className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
             {[
               ["10,000+", "Patients Served"],
               ["4.9★", "Google Rating"],
@@ -240,12 +240,18 @@ function Hero() {
             ))}
           </dl>
         </div>
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
-              <img src={heroImg.url} alt="Neurotherapy consultation and spine care at the clinic" width={1536} height={1024} className="aspect-[3/2] w-full object-cover" />
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-background/90 p-4 backdrop-blur">
+        <div className="relative mx-auto mt-14 max-w-5xl">
+          <div className="relative overflow-hidden rounded-3xl shadow-soft ring-1 ring-border">
+            <img
+              src={heroImg.url}
+              alt="Neurotherapy consultation and spine care at the clinic"
+              width={1536}
+              height={768}
+              className="aspect-[2/1] w-full object-cover"
+            />
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-background/90 p-4 backdrop-blur sm:left-auto sm:right-6 sm:max-w-xs">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-healing/15 text-healing"><ShieldCheck className="h-5 w-5" /></div>
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-healing/15 text-healing"><ShieldCheck className="h-5 w-5" /></div>
                 <div className="min-w-0">
                   <p className="truncate text-sm font-semibold">Safe, non-invasive therapy</p>
                   <p className="truncate text-xs text-muted-foreground">Personalized plans • No medication</p>
