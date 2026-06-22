@@ -178,3 +178,12 @@
   background-clip: text;
   color: transparent;
 }
+
+@theme inline {
+  --animate-marquee: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
