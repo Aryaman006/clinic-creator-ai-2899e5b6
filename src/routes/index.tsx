@@ -17,6 +17,7 @@ import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
 } from "@/components/ui/accordion";
 import { Toaster } from "@/components/ui/sonner";
+import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -142,14 +143,14 @@ function Index() {
 
 function Logo() {
   return (
-    <a href="#top" className="flex items-center gap-2.5">
-      <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-primary to-healing text-primary-foreground shadow-soft">
-        <Leaf className="h-5 w-5" />
-      </span>
-      <span className="flex flex-col leading-tight">
-        <span className="font-display text-base font-semibold tracking-tight">Dr. Mahindra</span>
-        <span className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Neurotherapy</span>
-      </span>
+    <a href="#top" className="flex items-center" aria-label="Neurotherapy Dr. Mahindra">
+      <img
+        src={logoAsset.url}
+        alt="Neurotherapy Dr. Mahindra — Natural Healing, Better Health, Better Life"
+        className="h-11 w-auto sm:h-12"
+        width={180}
+        height={48}
+      />
     </a>
   );
 }
@@ -512,9 +513,8 @@ function Footer() {
     <footer className="border-t border-border bg-foreground text-background">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-primary to-healing text-primary-foreground"><Leaf className="h-5 w-5" /></span>
-            <span className="font-display text-lg font-semibold">Neurotherapy Dr. Mahindra</span>
+          <div className="inline-flex items-center rounded-xl bg-background p-3">
+            <img src={logoAsset.url} alt="Neurotherapy Dr. Mahindra" className="h-12 w-auto" />
           </div>
           <p className="mt-4 max-w-md text-sm text-background/70">Natural Healing • Better Health • Better Life. A trusted neurotherapy clinic in Banashankari, Bengaluru.</p>
           <div className="mt-5 flex gap-3">
