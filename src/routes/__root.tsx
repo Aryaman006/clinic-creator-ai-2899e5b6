@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Neurotherapy Dr. Mahindra | Natural Healing Clinic in Bengaluru" },
-      { name: "description", content: "Trusted Neurotherapy and Natural Healing Clinic in Banashankari, Bengaluru. Supporting wellness through Neurotherapy, Acupressure, and holistic care. Call +91 76193 35553." },
+      { name: "description", content: "Trusted Neurotherapy and Natural Healing Clinic in Banashankari, Bengaluru. Supporting wellness through Neurotherapy and holistic care. Call +91 76193 35553." },
       { name: "author", content: "Neurotherapy Dr. Mahindra" },
       { property: "og:title", content: "Neurotherapy Dr. Mahindra | Natural Healing Clinic in Bengaluru" },
       { property: "og:description", content: "Trusted Neurotherapy and Natural Healing Clinic in Banashankari, Bengaluru. Supporting wellness through Neurotherapy, Acupressure, and holistic care. Call +91 76193 35553." },
