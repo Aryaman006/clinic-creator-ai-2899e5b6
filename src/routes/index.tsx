@@ -17,6 +17,11 @@ import {
   Accordion, AccordionItem, AccordionTrigger, AccordionContent,
 } from "@/components/ui/accordion";
 import { Toaster } from "@/components/ui/sonner";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -47,7 +52,7 @@ export const Route = createFileRoute("/")({
           postalCode: "560050",
           addressCountry: "IN",
         },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "500" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "41" },
       }),
     }],
   }),
@@ -92,14 +97,14 @@ const whyChoose = [
 ];
 
 const testimonials = [
-  { name: "Priya S.", location: "Banashankari", text: "After months of back pain, the neurotherapy sessions gave me real relief without any medication. Highly recommend.", rating: 5 },
-  { name: "Rakesh M.", location: "Jayanagar", text: "Migraines used to disrupt my work. The personalized plan here changed my routine completely.", rating: 5 },
-  { name: "Anita R.", location: "Basavanagudi", text: "Warm, professional and genuinely caring. My knee pain has improved noticeably.", rating: 5 },
-  { name: "Sandeep K.", location: "JP Nagar", text: "Felt heard and well-guided from day one. The drug-free approach really works.", rating: 5 },
-  { name: "Lakshmi N.", location: "Bengaluru", text: "I was sceptical at first, but the results spoke for themselves. Better sleep and less stress in just a few sessions.", rating: 5 },
-  { name: "Manoj T.", location: "Koramangala", text: "Finally found a clinic that listens. My frozen shoulder feels much better and I can move freely again.", rating: 5 },
-  { name: "Divya P.", location: "Hanumanthanagar", text: "The doctor explained everything clearly. I appreciate the natural, holistic way of healing.", rating: 5 },
-  { name: "Arun B.", location: "Uttarahalli", text: "Great experience. Friendly staff, calm clinic, and most importantly, my sciatica pain is under control.", rating: 5 },
+  { name: "Sunita Jain", text: "I am really thankful to Dr. Mahindra for his excellent Neurotherapy treatment. He listens patiently and treats the root cause. I feel much better now. Highly recommended.", rating: 5 },
+  { name: "Sree Latha", text: "I experienced a sudden CVA affecting the right side of my body. Dr. Mahindra diagnosed my condition during a home visit and treated me without medication. I recovered significantly and am grateful for his care.", rating: 5 },
+  { name: "Sujju Sujju", text: "Trusted place for health. I had a ligament tear and it improved without surgery. Dr. Mahindra is knowledgeable and genuinely cares about diagnosing and treating patients through Neurotherapy.", rating: 5 },
+  { name: "Max God", text: "I never expected such improvement in my back and neck pain. Thank you Dr. Mahindra and the Neurotherapy team.", rating: 5 },
+  { name: "Anokhi Jain", text: "Dr. Mahindra is a real hero in my husband's life. His therapy has been excellent and we highly recommend visiting for pain relief.", rating: 5 },
+  { name: "Anju Mehta", text: "Good treatment experience for knee pain and L4-L5 disc-related issues.", rating: 5 },
+  { name: "Jayashree Jay", text: "I had weakness, cervical spondylitis, lumbar spondylitis, vertigo and fear-related issues. After treatment from Dr. Mahindra I experienced remarkable improvement.", rating: 5 },
+  { name: "Kishore Chhabria", text: "Excellent support for back pain, osteoarthritis, sciatica and spinal issues. I felt significantly better after treatment.", rating: 5 },
 ];
 
 const faqs = [
@@ -369,43 +374,91 @@ function Testimonials() {
   return (
     <section id="reviews" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Trust stats */}
+        <div className="mx-auto mb-16 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {[
+            { icon: Star, label: "4.9 ★", sub: "Google Rating" },
+            { icon: MessageCircle, label: "41+", sub: "Verified Reviews" },
+            { icon: Calendar, label: "10+", sub: "Years Experience" },
+            { icon: Leaf, label: "Drug-Free", sub: "Natural Therapy" },
+            { icon: HeartPulse, label: "Personalized", sub: "Patient Care" },
+          ].map(({ icon: Icon, label, sub }) => (
+            <div key={label} className="flex flex-col items-center rounded-2xl border border-border bg-card p-5 text-center shadow-card">
+              <Icon className="h-6 w-6 text-primary" />
+              <p className="mt-2 font-display text-xl font-semibold">{label}</p>
+              <p className="text-xs text-muted-foreground">{sub}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Heading */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patient Stories</span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">What our patients say</h2>
-          <p className="mt-4 text-muted-foreground">Real experiences from people who found relief through natural healing.</p>
-          <a
-            href={MAPS_LINK}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium shadow-card transition-colors hover:border-primary/30"
-          >
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Patient Reviews & Success Stories</span>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Trusted by Patients Across Bangalore</h2>
+          <p className="mt-4 text-muted-foreground">Real experiences shared by patients who have undergone Neurotherapy treatment.</p>
+          <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium shadow-card">
             <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/10 text-primary">
               <Star className="h-3 w-3 fill-current" />
             </span>
-            4.9★ rating across 500+ Google Reviews
-            <ChevronRight className="h-4 w-4" />
-          </a>
+            4.9/5 Rating — Based on 41+ Google Reviews
+          </div>
         </div>
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+        {/* Desktop grid */}
+        <div className="mt-14 hidden gap-5 lg:grid lg:grid-cols-3 xl:grid-cols-4">
           {testimonials.map((t) => (
-            <figure key={t.name} className="relative flex flex-col rounded-2xl border border-border bg-card p-6 shadow-card transition-transform hover:-translate-y-1 hover:shadow-soft">
-              <Quote className="absolute right-5 top-5 h-6 w-6 text-primary/15" />
-              <div className="flex gap-0.5 text-healing">
-                {Array.from({ length: t.rating }).map((_, i) => <Star key={i} className="h-3.5 w-3.5 fill-current" />)}
-              </div>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">"{t.text}"</blockquote>
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-xs font-semibold text-primary">{t.name[0]}</span>
-                <div className="min-w-0">
-                  <span className="block truncate text-sm font-medium">{t.name}</span>
-                  <span className="block truncate text-xs text-muted-foreground">{t.location}</span>
-                </div>
-              </figcaption>
-            </figure>
+            <ReviewCard key={t.name} t={t} />
           ))}
+        </div>
+
+        {/* Mobile carousel */}
+        <div className="mt-14 lg:hidden">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full">
+            <CarouselContent className="-ml-4">
+              {testimonials.map((t) => (
+                <CarouselItem key={t.name} className="pl-4 basis-full sm:basis-1/2">
+                  <ReviewCard t={t} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+
+        {/* CTA & disclaimer */}
+        <div className="mt-12 text-center">
+          <Button asChild size="lg" variant="outline" className="rounded-full border-border">
+            <a href="https://g.page/r/your-google-review-link" target="_blank" rel="noreferrer">
+              Read More Google Reviews <ChevronRight className="ml-1.5 h-4 w-4" />
+            </a>
+          </Button>
+          <p className="mx-auto mt-6 max-w-xl text-xs text-muted-foreground">
+            Individual results may vary. Testimonials reflect personal experiences of patients.
+          </p>
         </div>
       </div>
     </section>
+  );
+}
+
+function ReviewCard({ t }: { t: typeof testimonials[0] }) {
+  return (
+    <figure className="relative flex h-full flex-col rounded-2xl border border-border bg-card p-6 shadow-card transition-transform hover:-translate-y-1 hover:shadow-soft">
+      <div className="flex gap-0.5 text-healing">
+        {Array.from({ length: t.rating }).map((_, i) => (
+          <Star key={i} className="h-3.5 w-3.5 fill-current" />
+        ))}
+      </div>
+      <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground/90">"{t.text}"</blockquote>
+      <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+        <span className="grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
+          {t.name[0]}
+        </span>
+        <div className="min-w-0">
+          <span className="block truncate text-sm font-medium">{t.name}</span>
+          <span className="block truncate text-xs text-muted-foreground">Verified Patient</span>
+        </div>
+      </figcaption>
+    </figure>
   );
 }
 
