@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
       { title: "Neurotherapy Dr. Mahindra | Natural Healing Clinic in Bengaluru" },
       { name: "description", content: "Trusted Neurotherapy and Natural Healing Clinic in Banashankari, Bengaluru. Supporting wellness through Neurotherapy and holistic care. Call +91 76193 35553." },
       { property: "og:title", content: "Neurotherapy Dr. Mahindra | Natural Healing Clinic in Bengaluru" },
-      { property: "og:description", content: "Drug-free wellness through Neurotherapy & Acupressure. 10,000+ patients served." },
+      { property: "og:description", content: "Drug-free wellness through Neurotherapy. 10,000+ patients served." },
     { property: "og:url", content: "/" },
     ],
     links: [
@@ -215,7 +215,7 @@ function Hero() {
             Trusted <span className="text-gradient-brand">Neurotherapy</span> & Natural Healing Clinic in Bengaluru
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Helping people improve their health naturally through Neurotherapy, Acupressure, and holistic wellness approaches.
+            Helping people improve their health naturally through Neurotherapy and holistic wellness approaches.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary/90">
