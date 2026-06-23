@@ -160,7 +160,7 @@ function Nav() {
     ["Reviews", "#reviews"], ["FAQ", "#faq"], ["Contact", "#contact"],
   ] as const;
   return (
-    <header id="top" className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-lg">
+    <header id="top" className="sticky top-0 z-40 border-b border-border/60 bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <Logo />
         <nav className="hidden items-center gap-8 lg:flex">
