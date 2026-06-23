@@ -147,9 +147,7 @@ function Logo() {
       <img
         src={logoAsset.url}
         alt="Neurotherapy Dr. Mahindra — Natural Healing, Better Health, Better Life"
-        className="h-11 w-auto sm:h-12"
-        width={180}
-        height={48}
+        className="h-[60px] w-auto sm:h-[80px]"
       />
     </a>
   );
