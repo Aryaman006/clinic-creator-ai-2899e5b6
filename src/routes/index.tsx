@@ -35,6 +35,7 @@ import neurotherapyAsset from "@/assets/neurotherapy-consultation.png.asset.json
 import neckpainAsset from "@/assets/neckpain-support.png.asset.json";
 import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
 import migraineAsset from "@/assets/migraine-support.png.asset.json";
+import arthritisAsset from "@/assets/arthritis-support.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -90,7 +91,7 @@ const services = [
   { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues.", image: sciaticaAsset.url },
   { title: "Migraine Support", desc: "Drug-free approach to recurring headaches.", image: migraineAsset.url },
   { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
-  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
+  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health.", image: arthritisAsset.url },
   { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
   { title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
   { title: "IBS Support", desc: "Holistic care for digestive comfort." },
