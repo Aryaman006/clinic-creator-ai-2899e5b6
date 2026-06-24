@@ -34,6 +34,7 @@ import backpainAsset from "@/assets/backpain-support.png.asset.json";
 import neurotherapyAsset from "@/assets/neurotherapy-consultation.png.asset.json";
 import neckpainAsset from "@/assets/neckpain-support.png.asset.json";
 import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
+import migraineAsset from "@/assets/migraine-support.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
