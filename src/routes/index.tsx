@@ -331,7 +331,7 @@ function Services() {
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
         <div className="mt-14">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, desc, image }) => (
+            {services.map(({ title, desc, image }) => (
               <article key={title} className="group flex flex-col rounded-2xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-soft overflow-hidden">
                 {image && (
                   <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -344,10 +344,7 @@ function Services() {
                   </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                  <h3 className="text-lg font-semibold">{title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
                   <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
                     Learn More <ChevronRight className="h-4 w-4" />
