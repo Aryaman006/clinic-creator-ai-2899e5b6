@@ -33,6 +33,8 @@ import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
 import backpainAsset from "@/assets/backpain-support.png.asset.json";
 import neurotherapyAsset from "@/assets/neurotherapy-consultation.png.asset.json";
 import neckpainAsset from "@/assets/neckpain-support.png.asset.json";
+import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -84,7 +86,7 @@ const services = [
   { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset.url },
   { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
   { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension.", image: neckpainAsset.url },
-  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
+  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues.", image: sciaticaAsset.url },
   { title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
   { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
   { title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
