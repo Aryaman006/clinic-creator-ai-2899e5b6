@@ -4,8 +4,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 import {
   Phone, MessageCircle, MapPin, Mail, Calendar, Star, ShieldCheck,
-  HeartPulse, Activity, Brain, Bone, Sparkles, Leaf, Stethoscope,
-  Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
+  HeartPulse, Activity, Sparkles, Leaf, Stethoscope,
+  Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -72,19 +72,19 @@ const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengalu
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
 
 const services = [
-  { icon: Brain, title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning." },
-  { icon: Bone, title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
-  { icon: Activity, title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
-  { icon: Compass, title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
-  { icon: Sparkles, title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
-  { icon: Hand, title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
-  { icon: Flame, title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
-  { icon: Bone, title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
-  { icon: Wind, title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
-  { icon: Droplets, title: "IBS Support", desc: "Holistic care for digestive comfort." },
-  { icon: Leaf, title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
-  { icon: Sun, title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
-  { icon: HeartPulse, title: "General Wellness", desc: "Whole-body care for long-term vitality." },
+  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning." },
+  { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
+  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
+  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
+  { title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
+  { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
+  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
+  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
+  { title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
+  { title: "IBS Support", desc: "Holistic care for digestive comfort." },
+  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
+  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
+  { title: "General Wellness", desc: "Whole-body care for long-term vitality." },
 ];
 
 const whyChoose = [
@@ -331,7 +331,7 @@ function Services() {
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
         <div className="mt-14">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, desc, image }) => (
+            {services.map(({ title, desc, image }) => (
               <article key={title} className="group flex flex-col rounded-2xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-soft overflow-hidden">
                 {image && (
                   <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -344,10 +344,7 @@ function Services() {
                   </div>
                 )}
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="mt-5 text-lg font-semibold">{title}</h3>
+                  <h3 className="text-lg font-semibold">{title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
                   <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
                     Learn More <ChevronRight className="h-4 w-4" />
