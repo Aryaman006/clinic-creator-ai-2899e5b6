@@ -22,6 +22,13 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
 import backpainAsset from "@/assets/backpain-support.png.asset.json";
 
@@ -325,14 +332,22 @@ function About() {
 }
 
 function Services() {
+  const [selected, setSelected] = useState<typeof services[number] | null>(null);
   return (
     <section id="services" className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
         <div className="mt-14">
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ title, desc, image }) => (
-              <article key={title} className="group flex flex-col rounded-2xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-soft overflow-hidden">
+            {services.map((service) => {
+              const { title, desc, image } = service;
+              return (
+              <button
+                key={title}
+                type="button"
+                onClick={() => setSelected(service)}
+                className="group flex flex-col rounded-2xl border border-border bg-card text-left shadow-card transition-all hover:-translate-y-1 hover:shadow-soft overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              >
                 {image && (
                   <div className="relative w-full aspect-[4/3] overflow-hidden">
                     <img
@@ -346,16 +361,98 @@ function Services() {
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-lg font-semibold">{title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
-                  <a href="#contact" className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 hover:transition-all">
-                    Learn More <ChevronRight className="h-4 w-4" />
-                  </a>
+                  <span className="mt-5 inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+                    Book Now <ChevronRight className="h-4 w-4" />
+                  </span>
                 </div>
-              </article>
-            ))}
+              </button>
+            );
+            })}
           </div>
         </div>
       </div>
+      <ServiceDialog service={selected} onOpenChange={(o) => !o && setSelected(null)} />
     </section>
+  );
+}
+
+function ServiceDialog({
+  service,
+  onOpenChange,
+}: {
+  service: { title: string; desc: string } | null;
+  onOpenChange: (open: boolean) => void;
+}) {
+  const [submitting, setSubmitting] = useState(false);
+  const title = service?.title ?? "";
+
+  function buildWhatsAppText(extra?: { name?: string; phone?: string; date?: string }) {
+    const base = `Hi Dr. Mahindra, I am interested in ${title} and would like to book a consultation.`;
+    if (!extra) return base;
+    const { name, phone, date } = extra;
+    const lines = [base];
+    if (name) lines.push(`Name: ${name}`);
+    if (phone) lines.push(`Mobile: ${phone}`);
+    if (date) lines.push(`Preferred date: ${date}`);
+    return lines.join("\n");
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const name = String(fd.get("name") ?? "").trim();
+    const phone = String(fd.get("phone") ?? "").trim();
+    const date = String(fd.get("date") ?? "").trim();
+    if (name.length < 2) { toast.error("Please enter your name"); return; }
+    if (phone.length < 7) { toast.error("Please enter a valid mobile number"); return; }
+    setSubmitting(true);
+    const text = buildWhatsAppText({ name, phone, date });
+    setTimeout(() => {
+      window.open(`${WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank");
+      toast.success("Opening WhatsApp to confirm your booking");
+      setSubmitting(false);
+      (e.target as HTMLFormElement).reset();
+      onOpenChange(false);
+    }, 300);
+  }
+
+  return (
+    <Dialog open={!!service} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-lg">
+        <DialogHeader>
+          <DialogTitle className="text-2xl">{title}</DialogTitle>
+          <DialogDescription>{service?.desc}</DialogDescription>
+        </DialogHeader>
+        <form onSubmit={handleSubmit} className="mt-2 space-y-4">
+          <div>
+            <Label htmlFor="svc-name" className="mb-1.5 inline-block text-sm font-medium">Name<span className="ml-0.5 text-destructive">*</span></Label>
+            <Input id="svc-name" name="name" required placeholder="Your full name" />
+          </div>
+          <div>
+            <Label htmlFor="svc-phone" className="mb-1.5 inline-block text-sm font-medium">Mobile Number<span className="ml-0.5 text-destructive">*</span></Label>
+            <Input id="svc-phone" name="phone" type="tel" required placeholder="+91 ..." />
+          </div>
+          <div>
+            <Label htmlFor="svc-date" className="mb-1.5 inline-block text-sm font-medium">Preferred Date</Label>
+            <Input id="svc-date" name="date" type="date" />
+          </div>
+          <div className="flex flex-col gap-2 pt-2 sm:flex-row">
+            <Button type="submit" disabled={submitting} className="flex-1 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
+              <Calendar className="mr-2 h-4 w-4" />{submitting ? "Sending..." : "Book Appointment"}
+            </Button>
+            <Button
+              type="button"
+              onClick={() => {
+                window.open(`${WHATSAPP}?text=${encodeURIComponent(buildWhatsAppText())}`, "_blank");
+              }}
+              className="flex-1 rounded-full bg-whatsapp text-white hover:bg-whatsapp/90"
+            >
+              <MessageCircle className="mr-2 h-4 w-4" />Chat on WhatsApp
+            </Button>
+          </div>
+        </form>
+      </DialogContent>
+    </Dialog>
   );
 }
 
