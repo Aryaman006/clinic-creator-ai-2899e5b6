@@ -31,6 +31,7 @@ import {
 } from "@/components/ui/dialog";
 import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
 import backpainAsset from "@/assets/backpain-support.png.asset.json";
+import neurotherapyAsset from "@/assets/neurotherapy-consultation.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
