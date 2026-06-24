@@ -94,7 +94,7 @@ const services = [
   { title: "Migraine Support", desc: "Drug-free approach to recurring headaches.", image: migraineAsset.url },
   { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods.", image: arthritisAsset.url },
   { title: "Arthritis Support", desc: "Comfort and mobility care for joint health.", image: arthritisNewAsset.url },
-  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
+  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally.", image: kneePainAsset.url },
   { title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
   { title: "IBS Support", desc: "Holistic care for digestive comfort." },
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
