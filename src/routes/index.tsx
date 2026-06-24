@@ -7,6 +7,7 @@ import {
   HeartPulse, Activity, Sparkles, Leaf, Stethoscope,
   Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
+  Building2, Users, Briefcase,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -157,6 +158,7 @@ function Index() {
         <WhyChoose />
         <Testimonials />
         <FAQ />
+        <CorporateEnquiries />
         <Contact />
       </main>
       <Footer />
@@ -182,7 +184,7 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
     ["About", "#about"], ["Services", "#services"], ["Why Us", "#why"],
-    ["Reviews", "#reviews"], ["FAQ", "#faq"], ["Contact", "#contact"],
+    ["Reviews", "#reviews"], ["FAQ", "#faq"], ["Corporate", "#corporate"], ["Contact", "#contact"],
   ] as const;
   return (
     <header id="top" className="sticky top-0 z-40 border-b border-border/60 bg-background">
@@ -594,6 +596,40 @@ function FAQ() {
             </AccordionItem>
           ))}
         </Accordion>
+      </div>
+    </section>
+  );
+}
+
+function CorporateEnquiries() {
+  return (
+    <section id="corporate" className="bg-surface py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHead eyebrow="Corporate Wellness" title="Corporate Enquiries" desc="Bring natural wellness to your workplace. We offer tailored Neurotherapy and holistic health programs for organizations." />
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            { icon: Users, title: "Employee Wellness Programs", desc: "Customized sessions to reduce stress, improve posture, and boost overall team well-being." },
+            { icon: Briefcase, title: "On-Site Therapy Sessions", desc: "Convenient in-office Neurotherapy camps for pain relief and relaxation without disrupting work." },
+            { icon: ShieldCheck, title: "Health Check-Up Camps", desc: "Periodic wellness assessments and guided therapy plans for your workforce." },
+            { icon: HeartPulse, title: "Stress & Posture Care", desc: "Targeted interventions for desk-related neck, back, and migraine issues." },
+            { icon: Sparkles, title: "Lifestyle Workshops", desc: "Interactive sessions on nutrition, movement, and sustainable healthy habits." },
+            { icon: Building2, title: "Flexible Packages", desc: "Scalable plans for startups, SMEs, and large enterprises across Bengaluru." },
+          ].map(({ icon: Icon, title, desc }) => (
+            <div key={title} className="rounded-2xl border border-border bg-card p-6 shadow-card">
+              <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
+              <p className="mt-4 font-semibold">{title}</p>
+              <p className="mt-1.5 text-sm text-muted-foreground">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button asChild size="lg" className="w-full rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary/90 sm:w-auto">
+            <a href={`${WHATSAPP}?text=${encodeURIComponent("Hi Dr. Mahindra, I am interested in corporate wellness programs for my organization. Could you share more details?")}`} target="_blank" rel="noreferrer"><MessageCircle className="mr-2 h-4 w-4" />Enquire on WhatsApp</a>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border sm:w-auto">
+            <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call {PHONE}</a>
+          </Button>
+        </div>
       </div>
     </section>
   );
