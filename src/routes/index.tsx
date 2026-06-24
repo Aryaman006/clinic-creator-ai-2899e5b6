@@ -102,7 +102,7 @@ const services = [
   { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
   { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
-  { title: "General Wellness", desc: "Whole-body care for long-term vitality." },
+  { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset.url },
 ];
 
 const whyChoose = [
