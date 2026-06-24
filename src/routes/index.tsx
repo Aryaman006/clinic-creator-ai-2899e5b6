@@ -30,7 +30,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
-import backpainAsset from "@/assets/backpain-support.png.asset.json";
+import backpainAsset from "@/assets/backpain-support-new.png.asset.json";
 import neurotherapyAsset from "@/assets/neurotherapy-consultation.png.asset.json";
 import neckpainAsset from "@/assets/neckpain-support.png.asset.json";
 import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
