@@ -4,8 +4,8 @@ import { toast } from "sonner";
 import { z } from "zod";
 import {
   Phone, MessageCircle, MapPin, Mail, Calendar, Star, ShieldCheck,
-  HeartPulse, Activity, Brain, Bone, Sparkles, Leaf, Stethoscope,
-  Hand, Flame, Droplets, Sun, Compass, Wind, ChevronRight, Quote,
+  HeartPulse, Activity, Sparkles, Leaf, Stethoscope,
+  Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
