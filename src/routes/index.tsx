@@ -102,7 +102,7 @@ const services = [
   { title: "Stress Management", desc: "Calm the nervous system through guided therapy.", image: stressManagementAsset.url },
   { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
-  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
+  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being.", image: lifestyleGuidanceAsset.url },
   { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset.url },
 ];
 
