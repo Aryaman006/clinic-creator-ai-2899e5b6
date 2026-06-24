@@ -80,7 +80,7 @@ const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengalu
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
 
 const services = [
-  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning." },
+  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset.url },
   { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
   { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
   { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
