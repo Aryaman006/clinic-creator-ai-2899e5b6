@@ -97,7 +97,7 @@ const services = [
   { title: "Arthritis Support", desc: "Comfort and mobility care for joint health.", image: arthritisNewAsset.url },
   { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally.", image: kneePainAsset.url },
   { title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
-  { title: "IBS Support", desc: "Holistic care for digestive comfort." },
+  { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
   { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
   { title: "General Wellness", desc: "Whole-body care for long-term vitality." },
