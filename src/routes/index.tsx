@@ -23,6 +23,7 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
+import backpainAsset from "@/assets/backpain-support.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
