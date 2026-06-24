@@ -41,6 +41,7 @@ import arthritisNewAsset from "@/assets/arthritis-support-new.png.asset.json";
 import kneePainAsset from "@/assets/knee-pain-support.png.asset.json";
 import stressManagementAsset from "@/assets/stress-management.png.asset.json";
 import generalWellnessAsset from "@/assets/general-wellness.png.asset.json";
+import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
