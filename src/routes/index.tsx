@@ -43,6 +43,7 @@ import kneePainAsset from "@/assets/knee-pain-support.png.asset.json";
 import stressManagementAsset from "@/assets/stress-management.png.asset.json";
 import generalWellnessAsset from "@/assets/general-wellness.png.asset.json";
 import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png.asset.json";
+import digestiveHealthAsset from "@/assets/digestive-health.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -102,7 +103,7 @@ const services = [
   { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally.", image: kneePainAsset.url },
   { title: "Stress Management", desc: "Calm the nervous system through guided therapy.", image: stressManagementAsset.url },
   { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
-  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
+  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches.", image: digestiveHealthAsset.url },
   { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being.", image: lifestyleGuidanceAsset.url },
   { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset.url },
 ];
