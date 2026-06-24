@@ -7,6 +7,7 @@ import {
   HeartPulse, Activity, Sparkles, Leaf, Stethoscope,
   Wind, ChevronRight, Quote,
   Menu, X, ChevronDown, Instagram, Facebook, Linkedin, MapPinned, Clock,
+  Building2, Users, Briefcase,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
