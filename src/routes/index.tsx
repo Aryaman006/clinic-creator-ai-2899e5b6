@@ -40,6 +40,7 @@ import arthritisAsset from "@/assets/arthritis-support.png.asset.json";
 import arthritisNewAsset from "@/assets/arthritis-support-new.png.asset.json";
 import kneePainAsset from "@/assets/knee-pain-support.png.asset.json";
 import stressManagementAsset from "@/assets/stress-management.png.asset.json";
+import generalWellnessAsset from "@/assets/general-wellness.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -101,7 +102,7 @@ const services = [
   { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
   { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
-  { title: "General Wellness", desc: "Whole-body care for long-term vitality." },
+  { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset.url },
 ];
 
 const whyChoose = [
