@@ -158,6 +158,7 @@ function Index() {
         <WhyChoose />
         <Testimonials />
         <FAQ />
+        <CorporateEnquiries />
         <Contact />
       </main>
       <Footer />
@@ -183,7 +184,7 @@ function Nav() {
   const [open, setOpen] = useState(false);
   const links = [
     ["About", "#about"], ["Services", "#services"], ["Why Us", "#why"],
-    ["Reviews", "#reviews"], ["FAQ", "#faq"], ["Contact", "#contact"],
+    ["Reviews", "#reviews"], ["FAQ", "#faq"], ["Corporate", "#corporate"], ["Contact", "#contact"],
   ] as const;
   return (
     <header id="top" className="sticky top-0 z-40 border-b border-border/60 bg-background">
