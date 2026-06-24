@@ -37,6 +37,7 @@ import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
 import migraineAsset from "@/assets/migraine-support.png.asset.json";
 import arthritisAsset from "@/assets/arthritis-support.png.asset.json";
 import arthritisNewAsset from "@/assets/arthritis-support-new.png.asset.json";
+import kneePainAsset from "@/assets/knee-pain-support.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
