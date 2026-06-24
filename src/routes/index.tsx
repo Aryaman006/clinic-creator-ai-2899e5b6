@@ -72,19 +72,19 @@ const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengalu
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
 
 const services = [
-  { icon: Brain, title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning." },
-  { icon: Bone, title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
-  { icon: Activity, title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
-  { icon: Compass, title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
-  { icon: Sparkles, title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
-  { icon: Hand, title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
-  { icon: Flame, title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
-  { icon: Bone, title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
-  { icon: Wind, title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
-  { icon: Droplets, title: "IBS Support", desc: "Holistic care for digestive comfort." },
-  { icon: Leaf, title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
-  { icon: Sun, title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
-  { icon: HeartPulse, title: "General Wellness", desc: "Whole-body care for long-term vitality." },
+  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning." },
+  { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
+  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
+  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
+  { title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
+  { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
+  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health." },
+  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally." },
+  { title: "Stress Management", desc: "Calm the nervous system through guided therapy." },
+  { title: "IBS Support", desc: "Holistic care for digestive comfort." },
+  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches." },
+  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being." },
+  { title: "General Wellness", desc: "Whole-body care for long-term vitality." },
 ];
 
 const whyChoose = [
