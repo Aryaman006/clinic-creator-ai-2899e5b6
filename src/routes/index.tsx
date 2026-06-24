@@ -147,7 +147,7 @@ const formSchema = z.object({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
       <Nav />
       <main>
         <Hero />
@@ -229,29 +229,29 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-hero">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-healing/30 bg-healing/10 px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider text-healing">
-            <Leaf className="h-3.5 w-3.5" /> Natural Healing • Better Health • Better Life
+          <span className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-healing/30 bg-healing/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider text-healing sm:px-3.5 sm:text-xs">
+            <Leaf className="h-3.5 w-3.5 shrink-0" /> <span>Natural Healing • Better Health • Better Life</span>
           </span>
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1 className="text-[2rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             Trusted <span className="text-gradient-brand">Neurotherapy</span> & Natural Healing Clinic in Bengaluru
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground sm:mt-6 sm:text-lg">
             Helping people improve their health naturally through Neurotherapy and holistic wellness approaches.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild size="lg" className="rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary/90">
+          <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center">
+            <Button asChild size="lg" className="w-full rounded-full bg-primary text-primary-foreground shadow-soft hover:bg-primary/90 sm:w-auto">
               <a href="#contact"><Calendar className="mr-2 h-4 w-4" />Book Appointment</a>
             </Button>
-            <Button asChild size="lg" variant="outline" className="rounded-full border-border">
+            <Button asChild size="lg" variant="outline" className="w-full rounded-full border-border sm:w-auto">
               <a href={`tel:${PHONE_TEL}`}><Phone className="mr-2 h-4 w-4" />Call Now</a>
             </Button>
-            <Button asChild size="lg" className="rounded-full bg-whatsapp text-white hover:bg-whatsapp/90">
+            <Button asChild size="lg" className="w-full rounded-full bg-whatsapp text-white hover:bg-whatsapp/90 sm:w-auto">
               <a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle className="mr-2 h-4 w-4" />WhatsApp Us</a>
             </Button>
           </div>
-          <dl className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-6 border-t border-border pt-8 sm:grid-cols-4">
+          <dl className="mx-auto mt-10 grid max-w-2xl grid-cols-2 gap-5 border-t border-border pt-8 sm:grid-cols-4 sm:gap-6">
             {[
               ["10,000+", "Patients Served"],
               ["4.9★", "Google Rating"],
@@ -259,7 +259,7 @@ function Hero() {
               ["Drug-Free", "Wellness Approach"],
             ].map(([k, v]) => (
               <div key={k}>
-                <dt className="font-display text-2xl font-semibold text-foreground">{k}</dt>
+                <dt className="font-display text-xl font-semibold text-foreground sm:text-2xl">{k}</dt>
                 <dd className="text-xs text-muted-foreground">{v}</dd>
               </div>
             ))}
@@ -313,7 +313,7 @@ function SectionHead({ eyebrow, title, desc }: { eyebrow: string; title: string;
 
 function About() {
   return (
-    <section id="about" className="py-20 sm:py-28">
+    <section id="about" className="py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <SectionHead eyebrow="About the Clinic" title="A calm space for natural healing" />
         <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
@@ -346,7 +346,7 @@ function About() {
 function Services() {
   const [selected, setSelected] = useState<typeof services[number] | null>(null);
   return (
-    <section id="services" className="bg-surface py-20 sm:py-28">
+    <section id="services" className="bg-surface py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Our Services" title="Holistic care, tailored to you" desc="A range of natural therapies addressing common pain points and long-term wellness goals." />
         <div className="mt-14">
@@ -470,7 +470,7 @@ function ServiceDialog({
 
 function WhyChoose() {
   return (
-    <section id="why" className="py-20 sm:py-28">
+    <section id="why" className="py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Why Choose Us" title="Care you can trust" />
         <div className="mt-14">
@@ -491,7 +491,7 @@ function WhyChoose() {
 
 function Testimonials() {
   return (
-    <section id="reviews" className="bg-surface py-20 sm:py-28">
+    <section id="reviews" className="bg-surface py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Trust stats */}
         <div className="mx-auto mb-16 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
@@ -583,7 +583,7 @@ function ReviewCard({ t }: { t: typeof testimonials[0] }) {
 
 function FAQ() {
   return (
-    <section id="faq" className="py-20 sm:py-28">
+    <section id="faq" className="py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="FAQ" title="Questions, answered" />
         <Accordion type="single" collapsible className="mt-12 space-y-3">
@@ -601,7 +601,7 @@ function FAQ() {
 
 function Contact() {
   return (
-    <section id="contact" className="bg-surface py-20 sm:py-28">
+    <section id="contact" className="bg-surface py-14 sm:py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow="Contact" title="Book your appointment" desc="Tell us how we can help — we usually respond within a few hours." />
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -721,13 +721,13 @@ function Footer() {
 
 function FloatingButtons() {
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3 sm:bottom-5 sm:right-5">
       <a href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="WhatsApp us"
-        className="grid h-14 w-14 place-items-center rounded-full bg-whatsapp text-white shadow-soft transition-transform hover:scale-105">
-        <MessageCircle className="h-6 w-6" />
+        className="grid h-12 w-12 place-items-center rounded-full bg-whatsapp text-white shadow-soft transition-transform hover:scale-105 sm:h-14 sm:w-14">
+        <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6" />
       </a>
       <a href={`tel:${PHONE_TEL}`} aria-label="Call now"
-        className="grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-soft transition-transform hover:scale-105 sm:hidden">
+        className="grid h-12 w-12 place-items-center rounded-full bg-primary text-primary-foreground shadow-soft transition-transform hover:scale-105 lg:hidden">
         <Phone className="h-5 w-5" />
       </a>
     </div>
