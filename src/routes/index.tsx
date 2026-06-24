@@ -83,7 +83,7 @@ const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Comp
 const services = [
   { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset.url },
   { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
-  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension." },
+  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension.", image: neckpainAsset.url },
   { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues." },
   { title: "Migraine Support", desc: "Drug-free approach to recurring headaches." },
   { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods." },
