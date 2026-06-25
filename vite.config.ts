@@ -8,8 +8,17 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
   tanstackStart: {
-    // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-    // nitro/vite builds from this
     server: { entry: "server" },
+  },
+  // Force Nitro to build a standalone Node.js server (works on Hostinger
+  // Node.js hosting and any generic Node host). Output lands in ./dist so
+  // Hostinger's build step finds a conventional output directory.
+  nitro: {
+    preset: "node-server",
+    output: {
+      dir: "dist",
+      publicDir: "dist/public",
+      serverDir: "dist/server",
+    },
   },
 });
