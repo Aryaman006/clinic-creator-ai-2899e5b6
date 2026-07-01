@@ -68,7 +68,7 @@ export const Route = createFileRoute("/")({
         telephone: "+917619335553",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "2nd Block, Phase 1, Sourabha Complex, 5th Cross Road, Banashankari 1st Stage",
+          streetAddress: "#335, 5th Cross, 11th Main, Spurthi Complex, Banashankari 1st Stage",
           addressLocality: "Bengaluru",
           addressRegion: "Karnataka",
           postalCode: "560050",
@@ -88,9 +88,9 @@ const WHATSAPP_DISPLAY = "+91 90355 11488";
 const INSTAGRAM = "https://www.instagram.com/neurotherapy_dr.mahindra/";
 const FACEBOOK = "https://www.facebook.com/NeurotherapyDrMahindra";
 const LINKEDIN = "https://www.linkedin.com/in/neurotherapy-dr-mahindra";
-const ADDRESS = "2nd Block, Phase 1, Sourabha Complex, 5th Cross Road, Banashankari 1st Stage, Bengaluru, Karnataka 560050";
-const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengaluru&output=embed";
-const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
+const ADDRESS = "#335, 5th Cross, 11th Main, Spurthi Complex, Banashankari 1st Stage, Bengaluru, Karnataka 560050";
+const MAPS_EMBED = "https://www.google.com/maps?q=%23335%2C+5th+Cross%2C+11th+Main%2C+Spurthi+Complex%2C+Banashankari+1st+Stage%2C+Bengaluru%2C+Karnataka+560050&output=embed";
+const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=%23335%2C+5th+Cross%2C+11th+Main%2C+Spurthi+Complex%2C+Banashankari+1st+Stage%2C+Bengaluru%2C+Karnataka+560050";
 
 const services = [
   { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset },
@@ -710,7 +710,7 @@ function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-wider text-background/90">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm text-background/70">
             <li className="flex gap-2"><Phone className="mt-0.5 h-4 w-4 shrink-0" /><a href={`tel:${PHONE_TEL}`}>{PHONE}</a></li>
-            <li className="flex gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>Banashankari 1st Stage, Bengaluru 560050</span></li>
+            <li className="flex gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><span>#335, Spurthi Complex, Banashankari 1st Stage, Bengaluru 560050</span></li>
             <li className="flex gap-2"><Mail className="mt-0.5 h-4 w-4 shrink-0" /><span>care@drmahindra.clinic</span></li>
           </ul>
         </div>
