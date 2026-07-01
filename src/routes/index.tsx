@@ -30,20 +30,20 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import logoAsset from "@/assets/neurotherapy-logo.png.asset.json";
-import backpainAsset from "@/assets/backpain-support.png.asset.json";
-import ibsAsset from "@/assets/backpain-support-new.png.asset.json";
-import neurotherapyAsset from "@/assets/neurotherapy-consultation-new.png.asset.json";
-import neckpainAsset from "@/assets/neckpain-support.png.asset.json";
-import sciaticaAsset from "@/assets/sciatica-support.png.asset.json";
-import migraineAsset from "@/assets/migraine-support.png.asset.json";
-import arthritisAsset from "@/assets/arthritis-support.png.asset.json";
-import arthritisNewAsset from "@/assets/arthritis-support-new.png.asset.json";
-import kneePainAsset from "@/assets/knee-pain-support.png.asset.json";
-import stressManagementAsset from "@/assets/stress-management.png.asset.json";
-import generalWellnessAsset from "@/assets/general-wellness.png.asset.json";
-import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png.asset.json";
-import digestiveHealthAsset from "@/assets/digestive-health.png.asset.json";
+import logoAsset from "@/assets/neurotherapy-logo.png";
+import backpainAsset from "@/assets/backpain-support.png";
+import ibsAsset from "@/assets/backpain-support-new.png";
+import neurotherapyAsset from "@/assets/neurotherapy-consultation-new.png";
+import neckpainAsset from "@/assets/neckpain-support.png";
+import sciaticaAsset from "@/assets/sciatica-support.png";
+import migraineAsset from "@/assets/migraine-support.png";
+import arthritisAsset from "@/assets/arthritis-support.png";
+import arthritisNewAsset from "@/assets/arthritis-support-new.png";
+import kneePainAsset from "@/assets/knee-pain-support.png";
+import stressManagementAsset from "@/assets/stress-management.png";
+import generalWellnessAsset from "@/assets/general-wellness.png";
+import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png";
+import digestiveHealthAsset from "@/assets/digestive-health.png";
 
 
 export const Route = createFileRoute("/")({
@@ -93,19 +93,19 @@ const MAPS_EMBED = "https://www.google.com/maps?q=Banashankari+1st+Stage+Bengalu
 const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=Sourabha+Complex+Banashankari+1st+Stage+Bengaluru";
 
 const services = [
-  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset.url },
-  { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset.url },
-  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension.", image: neckpainAsset.url },
-  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues.", image: sciaticaAsset.url },
-  { title: "Migraine Support", desc: "Drug-free approach to recurring headaches.", image: migraineAsset.url },
-  { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods.", image: arthritisAsset.url },
-  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health.", image: arthritisNewAsset.url },
-  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally.", image: kneePainAsset.url },
-  { title: "Stress Management", desc: "Calm the nervous system through guided therapy.", image: stressManagementAsset.url },
-  { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset.url },
-  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches.", image: digestiveHealthAsset.url },
-  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being.", image: lifestyleGuidanceAsset.url },
-  { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset.url },
+  { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset },
+  { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset },
+  { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension.", image: neckpainAsset },
+  { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues.", image: sciaticaAsset },
+  { title: "Migraine Support", desc: "Drug-free approach to recurring headaches.", image: migraineAsset },
+  { title: "Frozen Shoulder Care", desc: "Improve range of motion through natural methods.", image: arthritisAsset },
+  { title: "Arthritis Support", desc: "Comfort and mobility care for joint health.", image: arthritisNewAsset },
+  { title: "Knee Pain Support", desc: "Restore function and reduce strain naturally.", image: kneePainAsset },
+  { title: "Stress Management", desc: "Calm the nervous system through guided therapy.", image: stressManagementAsset },
+  { title: "IBS Support", desc: "Holistic care for digestive comfort.", image: ibsAsset },
+  { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches.", image: digestiveHealthAsset },
+  { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being.", image: lifestyleGuidanceAsset },
+  { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset },
 ];
 
 const whyChoose = [
@@ -172,7 +172,7 @@ function Logo() {
   return (
     <a href="#top" className="flex items-center" aria-label="Neurotherapy Dr. Mahindra">
       <img
-        src={logoAsset.url}
+        src={logoAsset}
         alt="Neurotherapy Dr. Mahindra — Natural Healing, Better Health, Better Life"
         className="h-[60px] w-auto sm:h-[80px]"
       />
@@ -687,7 +687,7 @@ function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
           <div className="inline-flex items-center rounded-xl bg-background p-3">
-            <img src={logoAsset.url} alt="Neurotherapy Dr. Mahindra" className="h-12 w-auto" />
+            <img src={logoAsset} alt="Neurotherapy Dr. Mahindra" className="h-12 w-auto" />
           </div>
           <p className="mt-4 max-w-md text-sm text-background/70">Natural Healing • Better Health • Better Life. A trusted neurotherapy clinic in Banashankari, Bengaluru.</p>
           <div className="mt-5 flex gap-3">
