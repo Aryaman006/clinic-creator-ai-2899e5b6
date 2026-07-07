@@ -44,6 +44,7 @@ import stressManagementAsset from "@/assets/stress-management.png";
 import generalWellnessAsset from "@/assets/general-wellness.png";
 import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png";
 import digestiveHealthAsset from "@/assets/digestive-health.png";
+import paralysisRecoveryAsset from "@/assets/paralysis-recovery.png";
 
 
 export const Route = createFileRoute("/")({
@@ -94,7 +95,7 @@ const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=%23335%2C+5th
 
 const services = [
   { title: "Neurotherapy Consultation", desc: "Personalized assessment and natural therapy planning.", image: neurotherapyAsset },
-  { title: "Paralysis Recovery", desc: "Natural neurotherapy support with up to 98% recovery reported in treated cases.", image: neurotherapyAsset },
+  { title: "Paralysis Recovery", desc: "Natural neurotherapy support with up to 98% recovery reported in treated cases.", image: paralysisRecoveryAsset },
   { title: "Back Pain Support", desc: "Targeted pressure-point therapy for chronic back discomfort.", image: backpainAsset },
   { title: "Neck Pain Support", desc: "Gentle techniques to ease stiffness and tension.", image: neckpainAsset },
   { title: "Sciatica Support", desc: "Holistic care for nerve pain and mobility issues.", image: sciaticaAsset },
