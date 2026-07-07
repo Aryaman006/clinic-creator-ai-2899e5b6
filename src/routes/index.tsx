@@ -106,6 +106,9 @@ const services = [
   { title: "Digestive Health", desc: "Strengthen gut wellness with natural approaches.", image: digestiveHealthAsset },
   { title: "Lifestyle Guidance", desc: "Daily habits for sustainable well-being.", image: lifestyleGuidanceAsset },
   { title: "General Wellness", desc: "Whole-body care for long-term vitality.", image: generalWellnessAsset },
+  { title: "Paralysis Recovery", desc: "Natural neurotherapy support with up to 98% recovery reported in treated cases.", image: neurotherapyAsset },
+  { title: "GBS (Guillain-Barré Syndrome) Support", desc: "Supportive neurotherapy care to aid nerve recovery and restore mobility.", image: neurotherapyNewAsset },
+  { title: "PCOD Support", desc: "Holistic, drug-free care to help balance hormones and improve well-being.", image: generalWellnessAsset },
 ];
 
 const whyChoose = [
