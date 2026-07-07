@@ -44,7 +44,7 @@ import stressManagementAsset from "@/assets/stress-management.png";
 import generalWellnessAsset from "@/assets/general-wellness.png";
 import lifestyleGuidanceAsset from "@/assets/lifestyle-guidance.png";
 import digestiveHealthAsset from "@/assets/digestive-health.png";
-import paralysisRecoveryAsset from "@/assets/paralysis-recovery.png";
+import paralysisRecoveryAsset from "@/assets/paralysis-recovery-uploaded.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
